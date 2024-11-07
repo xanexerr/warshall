@@ -15,22 +15,22 @@ def warshall_algorithm(graph):
     
     return transitive_closure
 
-# Example usage
-# 0 represents no edge, and 1 represents an 
-n = int(input())
-graph = [
-]
-for _ in range(n):
-    row = []
-    for c in range(n):
-        row.append(int(input()))
-    graph.append(row)
-    
-for i in range()
-# Compute the transitive closure
+n = int(input("Enter the number of vertices: "))
+graph = [[0] * n for _ in range(n)]
+print("ใส่เลขเข้าไปในนี้ แล้วเว้นวรรค")
+for i in range(n):
+    row_input = input().strip()
+    if row_input:
+        row = list(map(int, row_input.split()))
+        if len(row) != n:
+            print("Invalid input. ใส่ใหม่อีกครั้ง")
+            row_input = input().strip()
+        graph[i] = row
+
 closure = warshall_algorithm(graph)
 
-# Print the result
-print("Transitive Closure:")
+print("Transitive")
 for row in closure:
-    print(row)
+    for cell in row:
+        print(cell, end=" ")
+    print()
