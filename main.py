@@ -18,6 +18,7 @@ def warshall_algorithm(graph):
 n = int(input("Enter the number of vertices: "))
 graph = [[0] * n for _ in range(n)]
 print("ใส่เลขเข้าไปในนี้ แล้วเว้นวรรค")
+print('#ex : 1 1 1 1')
 for i in range(n):
     row_input = input().strip()
     if row_input:
